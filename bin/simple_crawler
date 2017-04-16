@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+require 'simple_crawler'
+
+options = {}
+
+opt_parse = OptionParser.new do |opts|
+  opts.banner = 'simple_crawler [options] url'
+
+  opts.on('-f', '--file filename', 'Output result to file') do |file|
+    options.file = file
+  end
+
+  opts.on_tail('-h', '--help', 'Show this message') do
+    puts opts
+    exit
+  end
+
+  # Another typical switch to print the version.
+  opts.on_tail('-v', '--version', 'Show version') do
+    puts SimpleCrawler::VERSION
+    exit
+  end
+end
+
+opt_parse.parse!
+
+unless ARGV[0]
+    puts opt_parse
+    exit
+end
+
+result = SimpleCrawler.crawl(ARGV[0])
+
+if options.file
+    File.open(options.file, 'w') { |file| file.write(result) }
+    exit
+end
+
+puts result
