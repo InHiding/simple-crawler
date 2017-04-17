@@ -47,7 +47,7 @@ elapsed = Benchmark.realtime do
     result = SimpleCrawler.crawl(ARGV[0])
 
     if options[:file]
-        File.open(options.file, 'w') { |file| file.write(result) }
+        File.open(options[:file], 'w') { |file| file.write(result) }
         exit
     end
 
