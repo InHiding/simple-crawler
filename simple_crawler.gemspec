@@ -36,6 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock", "~> 3.0"
   spec.add_development_dependency "pry-byebug", "~> 3.4"
 
-  spec.add_dependency 'oga', "~> 2.9"
-  spec.add_dependency 'httparty', "~> 0.14.0"
+  spec.add_dependency "oga", "~> 2.9"
+  spec.add_dependency "httparty", "~> 0.14.0"
+  spec.add_dependency "colorize", "~> 0.8.1"
 end
