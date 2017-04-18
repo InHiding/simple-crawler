@@ -18,6 +18,8 @@ Or install it yourself as:
 
     $ gem install simple_crawler
 
+If you use [rbenv](https://github.com/rbenv/rbenv) you may need to run `rbenv rehash` after gem installation.
+
 ## Usage
 
 Simple call the crawler from command line passing the domain you want to explore
