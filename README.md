@@ -23,7 +23,7 @@ Or install it yourself as:
 Simple call the crawler from command line passing the domain you want to explore
 
 ```bash
-$ simple-crawler www.example.org 
+$ simple-crawler http://www.example.org 
 ```
 
 For more options run:
