@@ -1,8 +1,6 @@
 # SimpleCrawler
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simple_crawler`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is a very simple web crawler with the intent of expore a single domain, no cross domain or subdomain scans happen, a list all static assets(images, javascript, stylesheets) for each page.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simple call the crawler from command line passing the domain you want to explore
+
+```bash
+$ simple-crawler www.example.org 
+```
+
+For more options run:
+
+```bash
+$ simple-crawler -h 
+```
 
 ## Development
 
